@@ -1,0 +1,51 @@
+﻿# Compiled files
+target/
+*.class
+
+# IDE files
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+.springBeans
+.sts4-cache
+
+# VS Code
+.vscode/
+.settings/
+
+# Eclipse
+bin/
+.metadata/
+
+# NetBeans
+nb-configuration.xml
+nbactions.xml
+
+# Logs
+logs/
+*.log
+
+# Database files
+*.db
+*.h2.db
+*.mv.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Maven specific
+dependency-reduced-pom.xml
+
+# H2 database file
+lmsdb.mv.db
+lmsdb.trace.db
+
+# Session files
+sessions/
+
+# Application properties with sensitive data
+application-dev.properties
+application-prod.properties
