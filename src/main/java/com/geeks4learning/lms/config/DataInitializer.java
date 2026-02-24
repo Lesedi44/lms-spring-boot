@@ -86,6 +86,13 @@ public class DataInitializer implements CommandLineRunner {
         userRepository.save(jane);
         log.info("Created employee: {}", jane.getUsername());
 
+        // When creating users, add email addresses
+        john.setEmail("john.doe@example.com");
+        jane.setEmail("jane.smith@example.com");
+        mike.setEmail("mike.adams@example.com");
+        sarah.setEmail("sarah.brown@example.com");
+        admin.setEmail("admin@example.com");
+
         // Create leave balances
         LeaveBalance johnBalance = new LeaveBalance();
         johnBalance.setEmployeeId(john.getId());

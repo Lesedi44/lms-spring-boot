@@ -28,6 +28,11 @@ public class User {
     @Column(nullable = false)
     private String role; // EMPLOYEE, MANAGER, ADMIN
 
+    @Column(nullable = false)
+    private String email;
+
+
+
     private String department;
 
     @Column(name = "manager_id")

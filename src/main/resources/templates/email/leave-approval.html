@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Leave Request Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .header {
+            background-color: #f0b90b;
+            color: #000;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .content {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .status-approved {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .status-rejected {
+            color: #dc3545;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .details {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2>Leave Management System</h2>
+    </div>
+    <div class="content">
+        <h3>Hello <span th:text="${employeeName}">Employee</span>,</h3>
+
+        <p>Your leave request has been <span th:class="${status == 'Approved' ? 'status-approved' : 'status-rejected'}" th:text="${status}">status</span>.</p>
+
+        <div class="details">
+            <h4>Leave Details:</h4>
+            <p><strong>Request ID:</strong> <span th:text="${requestId}">123</span></p>
+            <p><strong>Leave Type:</strong> <span th:text="${leaveType}">Annual</span></p>
+            <p><strong>Start Date:</strong> <span th:text="${startDate}">2026-03-01</span></p>
+            <p><strong>End Date:</strong> <span th:text="${endDate}">2026-03-05</span></p>
+            <p><strong>Working Days:</strong> <span th:text="${workingDays}">5</span></p>
+            <p><strong>Reason:</strong> <span th:text="${reason}">Vacation</span></p>
+        </div>
+
+        <div th:if="${comments}" class="comments">
+            <h4>Manager Comments:</h4>
+            <p><em>"<span th:text="${comments}">Comments here</span>"</em></p>
+            <p>- <span th:text="${managerName}">Manager</span></p>
+        </div>
+
+        <p>You can view all your leave requests by logging into the Leave Management System.</p>
+    </div>
+    <div class="footer">
+        <p>This is an automated message. Please do not reply to this email.</p>
+        <p>&copy; 2026 Leave Management System</p>
+    </div>
+</div>
+</body>
+</html>

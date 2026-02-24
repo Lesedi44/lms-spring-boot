@@ -1,0 +1,49 @@
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# IDE
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+.springBeans
+.sts4-cache
+
+# VS Code
+.vscode/
+.settings/
+
+# Maven
+target/
+*.log
+*.war
+*.ear
+dependency-reduced-pom.xml
+
+# Logs
+logs/
+*.log
+
+# Database files
+*.db
+*.h2.db
+*.mv.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation
+docs/
+screenshots/
+README.md
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Test files
+src/test/
